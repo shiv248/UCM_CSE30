@@ -1,6 +1,6 @@
 #include <iostream>
 #include "InsertionSort.h"
-
+#include "SelectionSort.h"
 using namespace std;
 
 void display(int list[], int size, string message){
@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
     
     display(numbers, len, "Before:");
     
-    insertion_sort(numbers, len);
+    selection_sort(numbers, len);
     
     display(numbers, len, "After:");
     

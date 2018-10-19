@@ -6,18 +6,27 @@
 // Declare and define the insertion sort function below
 // You *MUST* use the swap operation defined in Swap.h to swap elements
 void insertion_sort (int numbers[], int length){
-	int n = length;
-	for(int i = 1; i < n; i++){
+	/*	for(int i = 1; i < length; i++){
 		int j = i;
 		while(j > 0 && numbers[j-1] > numbers[j]){
-			swap(numbers, j-1, j);
-			j = j-1;
+		swap(numbers, j-1, j);
+		j = j-1;
 		}
+		}
+		*/
+	for(int i = 1; i < length; i++){
+		int key = numbers[i];
+		int item = i-1;
+		while(item >= 0 && numbers[item] > key){
+			numbers[item + 1] = numbers[item];
+			item -= 1;
+		}
+		numbers[item + 1] = key;
 	}
-
-
-
 }
+
+
+
 
 /*
    void insertion_sort (int numbers[], int length){
